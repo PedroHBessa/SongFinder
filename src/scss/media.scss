@@ -8,6 +8,13 @@
 		font-size: 15px;
 	}
 }
+//all the media queries
+@media only screen and (max-width: 450px) {
+	
+	.search__input {
+		font-size: 8px;
+	}
+}
 
 @media only screen and (max-width: 1200px) {
 	.videos__list {
@@ -109,6 +116,6 @@
 
 @media only screen and (max-width: 300px) {
 	.search__input {
-		font-size: 15px;
+		font-size: 8px;
 	}
 }
