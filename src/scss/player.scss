@@ -1,0 +1,44 @@
+.player {
+	display: flex;
+	justify-content: center;
+	top: 25vh;
+	&__description {
+		padding: 50px;
+		width: 1180px;
+		background-color: rgba(0, 0, 0, 0.753);
+		color: white;
+		& h1 {
+			padding-bottom: 20px;
+		}
+		& p {
+			padding-bottom: 40%;
+		}
+	}
+}
+
+.player-main {
+	margin-left: 2%;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	height: 100vh;
+	z-index: 500;
+	opacity: 0;
+	transition: opacity .3s;
+	
+	
+}
+
+.close-btn {
+	font-size: 5em;
+	position: fixed;
+	color: white;
+	top: 10%;
+	left: 90%;
+	cursor: pointer;
+	&:hover {
+		transform: scale(1.2);
+		transition: transform 0.5s;
+	}
+}
