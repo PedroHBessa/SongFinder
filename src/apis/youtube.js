@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-const KEY = "AIzaSyADgv2wFXTsqX91jR5hW7TSIlFqBfWfuDk";
+const KEY = "AIzaSyDLP403W4rgPbd6XMpC6o1HaBflAqYZJ8w";
 
 const req = {
   //get list of videos from youtube api
