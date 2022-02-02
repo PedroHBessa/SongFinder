@@ -31,6 +31,7 @@ class SearchBar extends React.Component {
             value={this.state.term}
             onChange={this.onInputChange}
           ></input>
+          <i className="fa fa-search" onClick={this.onFormSubmit}></i>
         </form>
       </section>
     );

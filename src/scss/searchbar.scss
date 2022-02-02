@@ -7,6 +7,7 @@
 	}
 }
 
+
 .showbar {
 	animation: showbar .5s both;
 	animation-delay: .5s;
@@ -34,7 +35,7 @@
 		background-color: rgba(255, 255, 255, 0.705);
 		text-transform: uppercase;
 		font-weight: 600;
-		background-image: url("../assets/lupa2.png");
+		//background-image: url("../assets/lupa2.png");
 		background-repeat: no-repeat;
 		background-size: 18px 18px;
 		background-position: 95% center;
@@ -47,4 +48,25 @@
 			font-weight: 600;
 		}
 	}
+}
+
+
+@keyframes opacity {
+	100% {
+		opacity: 1
+	}
+
+}
+
+form i {
+	position: relative;
+	float: right;
+	top: -30px;
+	left: -30px;
+	animation: opacity .5s both;
+	animation-delay: 1s;
+	opacity: 0;
+	cursor: pointer;
+	
+	
 }
