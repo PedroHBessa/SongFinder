@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Como rodar o projeto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1- Instale o git na sua máquina (https://git-scm.com/downloads)
 
-## Available Scripts
+2- Instale o Node na sua máquina (https://nodejs.org/en/download/)
 
-In the project directory, you can run:
+3- Abra o terminal, navegue até alguma pasta de sua escolha e execute os seguintes comandos:
+a) git clone https://github.com/PedroHBessa/SongFinder.git
+b) cd SongFinder
+c) npm install
+d) npm start
 
-### `npm start`
+4- Abra o navegador e acesse http://localhost:3000
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Obs: o número da porta pode ser diferente caso já esteja sendo usada.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Como foi resolver o teste?
 
-### `npm test`
+Primeiramente pensei em qual seria o objetivo principal da aplicação. Com isso
+comecei a organizar as telas mentalmente para que o objetivo fosse cumprido da
+forma mais direta e com o menor número de cliques possível.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Como a aplicação não é muito grande, criei apenas 4 componentes:
 
-### `npm run build`
+- Componente da barra de busca (SearchBar)
+- Componente de exibição da lista de videos (Videos)
+- Componente de execução de video e exibição de estatísticas (player)
+- Componente helper para ajudar em algumas funcionalidades de estilo (GhostLayer)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Apesar do projeto ser baseado na api do Youtube, tentei fazer um layout um pouco diferente,
+ao invés de deixar todos os componentes estáticos na tela, me baseei numa aplicação de
+página única (SPA).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Utilizei o Axios para as requisições HTTP,
+usei dois pacotes da api do Youtube: Search e Statistics.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Link para ver o projeto live através do Heroku
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://song-finder-test.herokuapp.com/
