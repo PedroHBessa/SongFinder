@@ -61,12 +61,20 @@
 form i {
 	position: relative;
 	float: right;
-	top: -30px;
+	top: -38px;
 	left: -30px;
 	animation: opacity .5s both;
 	animation-delay: 1s;
 	opacity: 0;
 	cursor: pointer;
+	border-radius: 50%;
+	padding: 8px;
+	
+
+	&:hover{
+		background-color: rgba(0, 0, 0, 0.137);
+		transition: background-color 1s;
+	}
 	
 	
 }
