@@ -3,6 +3,8 @@ import "../scss/player.scss";
 
 //create a Player screen where the video can be watched.
 class Player extends React.Component {
+  state = { stopSound: false };
+
   //close window of the player screen and go back to video list.
   closeWindow = () => {
     document.body.style.overflow = "auto";
@@ -11,6 +13,8 @@ class Player extends React.Component {
     //document.querySelector(".player-main").style.display = "none";
     document.querySelector(".player-main").style.opacity = "0";
     document.querySelector(".player-main").style.zIndex = "-1000";
+
+    document.querySelector(".iframe").setAttribute("src", "");
   };
 
   render() {
@@ -25,9 +29,11 @@ class Player extends React.Component {
         <div className="player-flex">
           <div className="player">
             <iframe
+              className="iframe"
               src={`https://www.youtube.com/embed/${this.props.data.video.id.videoId}`}
               width="100%"
               title="Iframe Example"
+              allowFullScreen
             ></iframe>
             <div className="player__description">
               <h1>{this.props.data.video.snippet.title}</h1>

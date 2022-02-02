@@ -13,6 +13,8 @@ class App extends React.Component {
 
   //get list of videos from youtube api
   onTermSubmit = async (term) => {
+    console.log("loading...");
+
     const response = await youtube.videoList.get("/search", {
       params: {
         q: term,
@@ -20,7 +22,6 @@ class App extends React.Component {
     });
 
     this.setState({ videos: response.data.items });
-    console.log(this.state.videos);
   };
 
   render() {
