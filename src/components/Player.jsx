@@ -60,31 +60,32 @@ class Player extends React.Component {
             <div className="player__description">
               <h1>{this.props.data.video.snippet.title}</h1>
               <p>{this.props.data.video.snippet.description}</p>
-
-              <h3>
-                <i className="fa fa-eye"></i>
-                {this.props.data.response === undefined
-                  ? ""
-                  : this.nFormatter(
-                      parseInt(
-                        this.props.data.response.data.items[0].statistics
-                          .viewCount
-                      ),
-                      1
-                    )}
-              </h3>
-              <h3>
-                <i className="fa fa-heart"></i>
-                {this.props.data.response === undefined
-                  ? ""
-                  : this.nFormatter(
-                      parseInt(
-                        this.props.data.response.data.items[0].statistics
-                          .likeCount
-                      ),
-                      1
-                    )}
-              </h3>
+              <div className="player__statistics">
+                <h3>
+                  <i className="fa fa-eye"></i>
+                  {this.props.data.response === undefined
+                    ? ""
+                    : this.nFormatter(
+                        parseInt(
+                          this.props.data.response.data.items[0].statistics
+                            .viewCount
+                        ),
+                        1
+                      )}
+                </h3>
+                <h3>
+                  <i className="fa fa-heart"></i>
+                  {this.props.data.response === undefined
+                    ? ""
+                    : this.nFormatter(
+                        parseInt(
+                          this.props.data.response.data.items[0].statistics
+                            .likeCount
+                        ),
+                        1
+                      )}
+                </h3>
+              </div>
             </div>
           </div>
           <div onClick={this.closeWindow} className="close-btn">
