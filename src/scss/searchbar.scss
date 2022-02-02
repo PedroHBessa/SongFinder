@@ -1,0 +1,50 @@
+@keyframes showbar {
+	100% {
+		opacity: 1
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+.showbar {
+	animation: showbar .5s both;
+	animation-delay: .5s;
+	opacity: 0;
+	width: 0%;
+}
+
+.search {
+	&__main {
+		padding-top: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		& form {
+			width: 66%;
+		}
+	}
+	&__input {
+		padding: 12px 0 12px 20px;
+		background-color: transparent;
+		transition: transform 250ms ease-in-out;
+		font-size: 15px;
+		line-height: 18px;
+		color: #000000e3;
+		background-color: rgba(255, 255, 255, 0.705);
+		text-transform: uppercase;
+		font-weight: 600;
+		background-image: url("../assets/lupa.png");
+		background-repeat: no-repeat;
+		background-size: 18px 18px;
+		background-position: 95% center;
+		border-radius: 50px;
+		border: 1px solid #000000;
+		&::placeholder {
+			color: #0000005d;
+			text-transform: uppercase;
+			letter-spacing: 1.5px;
+			font-weight: 600;
+		}
+	}
+}
