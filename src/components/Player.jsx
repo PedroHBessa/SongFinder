@@ -17,6 +17,28 @@ class Player extends React.Component {
     document.querySelector(".iframe").setAttribute("src", "");
   };
 
+  nFormatter(num, digits) {
+    const lookup = [
+      { value: 1, symbol: "" },
+      { value: 1e3, symbol: "k" },
+      { value: 1e6, symbol: "M" },
+      { value: 1e9, symbol: "G" },
+      { value: 1e12, symbol: "T" },
+      { value: 1e15, symbol: "P" },
+      { value: 1e18, symbol: "E" },
+    ];
+    const rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
+    var item = lookup
+      .slice()
+      .reverse()
+      .find(function (item) {
+        return num >= item.value;
+      });
+    return item
+      ? (num / item.value).toFixed(digits).replace(rx, "$1") + item.symbol
+      : "0";
+  }
+
   render() {
     let playerData;
 
@@ -40,16 +62,28 @@ class Player extends React.Component {
               <p>{this.props.data.video.snippet.description}</p>
 
               <h3>
+                <i className="fa fa-eye"></i>
                 {this.props.data.response === undefined
                   ? ""
-                  : "views: " +
-                    this.props.data.response.data.items[0].statistics.viewCount}
+                  : this.nFormatter(
+                      parseInt(
+                        this.props.data.response.data.items[0].statistics
+                          .viewCount
+                      ),
+                      1
+                    )}
               </h3>
               <h3>
+                <i className="fa fa-heart"></i>
                 {this.props.data.response === undefined
                   ? ""
-                  : "likes: " +
-                    this.props.data.response.data.items[0].statistics.likeCount}
+                  : this.nFormatter(
+                      parseInt(
+                        this.props.data.response.data.items[0].statistics
+                          .likeCount
+                      ),
+                      1
+                    )}
               </h3>
             </div>
           </div>
