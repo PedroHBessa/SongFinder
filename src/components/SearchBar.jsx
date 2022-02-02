@@ -17,6 +17,8 @@ class SearchBar extends React.Component {
   onFormSubmit = (event) => {
     event.preventDefault();
 
+    document.querySelector(".videos__main").style.display = "none";
+    document.querySelector(".lds-ring").style.display = "inline-block";
     this.props.onFormSubmit(this.state.term);
   };
 
@@ -33,6 +35,12 @@ class SearchBar extends React.Component {
           ></input>
           <i className="fa fa-search" onClick={this.onFormSubmit}></i>
         </form>
+        <div className="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </section>
     );
   }

@@ -20,6 +20,11 @@ class App extends React.Component {
         q: term,
       },
     });
+    //kill the loading animation when videos are displayed
+    if (response.status === 200) {
+      document.querySelector(".lds-ring").style.display = "none";
+      document.querySelector(".videos__main").style.display = "flex";
+    }
 
     this.setState({ videos: response.data.items });
   };

@@ -10,7 +10,7 @@ const req = {
     baseURL: "https://www.googleapis.com/youtube/v3",
     params: {
       part: "snippet",
-      maxResults: 12,
+      maxResults: 50,
       key: KEY,
     },
   }),

@@ -17,6 +17,7 @@ class Videos extends React.Component {
         id: id,
       },
     });
+
     //get the statistics response and send to state of this component
     this.setState({ response: response });
     console.log(response);
