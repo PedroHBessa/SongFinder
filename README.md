@@ -5,10 +5,11 @@
 2- Instale o Node na sua máquina (https://nodejs.org/en/download/)
 
 3- Abra o terminal, navegue até alguma pasta de sua escolha e execute os seguintes comandos:
-a) git clone https://github.com/PedroHBessa/SongFinder.git
-b) cd SongFinder
-c) npm install
-d) npm start
+
+- git clone https://github.com/PedroHBessa/SongFinder.git
+- cd SongFinder
+- npm install
+- npm start
 
 4- Abra o navegador e acesse http://localhost:3000
 
