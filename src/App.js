@@ -30,7 +30,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <div style={{ display: "none" }}>learn react</div>
         <Ghost />
 
         <SearchBar onFormSubmit={this.onTermSubmit} />

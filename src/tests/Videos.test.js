@@ -1,9 +1,7 @@
 import "@testing-library/jest-dom";
-import { screen, render, fireEvent, waitFor } from "@testing-library/react";
+import { screen, render } from "@testing-library/react";
 
 import Videos from "../components/Videos";
-import SearchBar from "../components/SearchBar";
-import App from "../App";
 
 describe("Videos", () => {
   it("Videos list should be in the screen after a form submit", () => {
