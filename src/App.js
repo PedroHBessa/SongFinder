@@ -13,8 +13,6 @@ class App extends React.Component {
 
   //get list of videos from youtube api
   onTermSubmit = async (term) => {
-    console.log("loading...");
-
     const response = await youtube.videoList.get("/search", {
       params: {
         q: term,

@@ -11,7 +11,6 @@ class Videos extends React.Component {
 
   //get the id of an unique video and send to youtube api to get statistics of this video
   onClickVideo = async (id) => {
-    console.log(id);
     const response = await youtube.videoStat.get("/videos", {
       params: {
         id: id,
@@ -20,12 +19,10 @@ class Videos extends React.Component {
 
     //get the statistics response and send to state of this component
     this.setState({ response: response });
-    console.log(response);
   };
 
   //get data of an unique video from lists of videos to send to player screen and do some styles to fit the player screen
   getId = (event) => {
-    console.log(event);
     document.body.style.overflow = "auto";
     document.querySelector(".ghost").style.opacity = "1";
     document.querySelector(".ghost").style.zIndex = "50";
@@ -40,10 +37,10 @@ class Videos extends React.Component {
   };
 
   render() {
-    console.log(this.props.data);
     //create a snippet and render a list of videos in videos screen
     const liSnippet = this.props.data.map((arr, index) => (
       <li
+        key={index}
         title="video"
         id={index}
         onClick={(e) => {
