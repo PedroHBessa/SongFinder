@@ -27,13 +27,18 @@ class SearchBar extends React.Component {
       <section className="search__main">
         <form onSubmit={this.onFormSubmit}>
           <input
+            role="form"
             className={"search__input " + this.state.animations}
             type="text"
             placeholder="Search artists, bands, songs..."
             value={this.state.term}
             onChange={this.onInputChange}
           ></input>
-          <i className="fa fa-search" onClick={this.onFormSubmit}></i>
+          <i
+            title="submit-btn"
+            className="fa fa-search"
+            onClick={this.onFormSubmit}
+          ></i>
         </form>
         <div className="lds-ring">
           <div></div>

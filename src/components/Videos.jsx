@@ -40,9 +40,11 @@ class Videos extends React.Component {
   };
 
   render() {
+    console.log(this.props.data);
     //create a snippet and render a list of videos in videos screen
     const liSnippet = this.props.data.map((arr, index) => (
       <li
+        title="video"
         id={index}
         onClick={(e) => {
           this.getId(e);
